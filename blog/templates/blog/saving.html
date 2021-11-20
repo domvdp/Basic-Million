@@ -1,0 +1,55 @@
+{% extends "blog/base.html" %}
+{% block content %}
+
+<div class="title-container">
+  <div class="title" id="saving-title">
+    <span>{{ title }}</span>
+  </div>
+</div>
+
+<div class="intro">
+  <p>
+    This is the most important part of becoming financially free, period.
+  </p>
+  <p>
+    The mindset section will include content aimed towards enlightening you
+    about a very simple yet vital fact, that you don't need to spend
+    much money to be happy. Many things that result in true happiness are
+    often free, or are at least cheaper than you expected.
+  </p>
+  <p>
+    If you can master being able to save more than you spend for the rest of
+    your life whilst maintaining your normal levels of happiness, then this
+    alone will drastically change your life for the better.
+  </p>
+  <p>
+    So, lets get to it! List out all those monthly subscriptions and cancel
+    those that are not essiential to your happiness. Do you really need to
+    buy a new car? Are you sure you need to buy a bigger house? Do you
+    actually need that brand new 4K TV? Can you reduce your rent? Does your
+    child really need so many presents, or would they prefer an adventure or
+    more parental interaction?
+  </p>
+  <p>
+    In this SAVING's section, I am going to break down what you can do to
+    save money without reducing the quality of your life.
+  </p>
+  <p>
+    Important note - do not comprimise your health to save money! Invest in
+    yourself by eating healthily and exercising. This is the one expense
+    that can easily be justified.
+  </p>
+  <p>
+    Content Coming Soon...
+  </p>
+  <hr class="line-sep">
+</div>
+
+<div class="blog-cards-container" id="saving-postcard-colors">
+  {% for post in saving_posts %}
+    {% include 'blog/postcard.html' %}
+  {% endfor %}
+</div>
+<div class="sidebar"></div>
+
+{% endblock content %}

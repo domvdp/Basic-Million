@@ -1,0 +1,56 @@
+{% extends "blog/base.html" %}
+{% block content %}
+
+<div class="title-container">
+  <div class="title" id="mindset-title">
+    <span>{{ title }}</span>
+  </div>
+</div>
+
+<div class="intro">
+  <p>
+    This is perhaps the best place to start your journey towards financial freedom.
+    It is going to take discipline, and so this MINDSET section will have
+    you gathering an understanding of why you genuinely want more
+    money, and once you've discovered a meaningful reason, it will keep you
+    from questioning whether or not it is all worth the trouble; it will
+    keep you from quitting.
+  </p>
+  <p>
+    For the vast majority, I can assure you that aiming to buy an expensive
+    car or house will not lead to financial freedom, and so you'll want to
+    think a little harder about your goal. The good news is, I will
+    be providing you with all the information necessary to understand
+    yourself better, and therefore helping you identify your personal
+    reasons for obtaining more wealth.
+  </p>
+  <p>
+    We are also going to discuss how you can increase your happiness by
+    simply changing your persective. You are likely more unhappy when you
+    compare yourself to those who have more, which in turn leads to
+    an everlasting cycle of spending more money in attempt to feel less
+    inferior. Try not to compare yourself to those who 'appear' to have it
+    better than you, because there will always be someone with more, and
+    you'll never feel like you have enough. So, let's start by comparing
+    yourself to those who have it much worse, and trust me, there is always
+    someone who has it worse. If you do this, you'll learn to appreciate
+    what you have, feel more satisfied, spend less money and ulimately have
+    'more' for the rest of your life.
+  </p>
+  <p>
+    Your mind is far more powerful than you know.
+  </p>
+  <p>
+  Content Coming Soon...
+  </p>
+  <hr class="line-sep">
+</div>
+
+<div class="blog-cards-container">
+  {% for post in mindset_posts %}
+    {% include 'blog/postcard.html' %}
+  {% endfor %}
+</div>
+<div class="sidebar"></div>
+
+{% endblock content %}

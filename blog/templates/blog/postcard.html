@@ -1,0 +1,35 @@
+{% block postcard %}
+
+{% if forloop.counter|divisibleby:2 %}
+<div class="blog-card alt-card">
+	<div class="meta">
+		<div class="photo" style="background-image: url('{{ post.header_image.url }}')"></div>
+	</div>
+	<div class="description">
+		<h1>{{ post.title|truncatechars:50 }}</h1>
+		<h2>{{ post.sub_title|truncatechars:50 }}</h2>
+		<p>{{ post.content|truncatechars:250 }}</p>
+		<div class="postcard-date">(Posted: {{ post.date_posted }})</div>
+		<div class="read-more">
+			<a href="#" class="btn btn--with-icon"><i class="fas fa-long-arrow-alt-right"></i>Read More</a>
+		</div>
+	</div>
+</div>
+{% else %}
+<div class="blog-card">
+	<div class="meta">
+		<div class="photo" style="background-image: url('{{ post.header_image.url }}')"></div>
+	</div>
+	<div class="description">
+		<h1>{{ post.title|truncatechars:50 }}</h1>
+		<h2>{{ post.sub_title|truncatechars:50 }}</h2>
+		<p> {{ post.content|truncatechars:250 }}</p>
+		<div class="postcard-date">(Posted: {{ post.date_posted }})</div>
+		<div class="read-more">
+			<a href="#" class="btn btn--with-icon"><i class="fas fa-long-arrow-alt-right"></i>Read More</a>
+		</div>
+	</div>
+</div>
+{% endif %}
+
+{% endblock %}

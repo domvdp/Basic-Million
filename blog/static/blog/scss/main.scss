@@ -1,0 +1,34 @@
+
+@import 'config';
+@import 'nav';
+@import 'titles';
+@import 'intro';
+@import 'postcard';
+@import 'sidebar';
+@import 'home';
+@import 'footer';
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: Sans-Serif, "Open Sans", serif;
+}
+
+.main-container {
+  display: grid;
+  grid-template-columns: 1fr 800px 300px 1fr;
+  grid-template-areas:
+    ". intro  intro  ."
+    ". blogcard  sidebar  .";
+  margin-top: -195px;
+}
+
+p {
+  margin: 20px 0 20px 0;
+}
+
+.line-sep {
+  margin: 60px 0 70px 0;
+}

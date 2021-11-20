@@ -1,0 +1,56 @@
+{% extends "blog/base.html" %}
+{% block content %}
+
+<div class="title-container">
+  <div class="title">
+    <span>{{ title }}</span>
+  </div>
+</div>
+
+<div class="intro"></div>
+
+<div class="blog-cards-container">
+  {% for post in posts %}
+    {% if post in saving_posts %}
+      <div id="saving-postcard-colors">
+        {% include 'blog/postcard.html' %}
+      </div>
+    {% endif %}
+    {% if post in investing_posts %}
+      <div id="investing-postcard-colors">
+        {% include 'blog/postcard.html' %}
+      </div>
+    {% endif %}
+    {% if post in mindset_posts %}
+      <div id="mindset-postcard-colors">
+        {% include 'blog/postcard.html' %}
+      </div>
+    {% endif %}
+    {% if post in motivation_posts %}
+      <div id="motivation-postcard-colors">
+        {% include 'blog/postcard.html' %}
+      </div>
+    {% endif %}
+  {% endfor %}
+</div>
+<div class="sidebar"></div>
+
+{% if is_paginated %}
+  {% if page_obj.has_previous %}
+  <a href="?page=1">First</a>
+  <a href="?page={{ page_obj.previous_page_number}}">Previous</a>
+  {% endif %}
+  {% for num in page_obj.paginator.page_range %}
+    {% if page_obj.number == num %}
+      <a href="?page={{ num }}">{{ num }}</a>
+      {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %}
+      <a href="?page={{ num }}">{{ num }}</a>
+    {% endif %}
+  {% endfor %}
+  {% if page_obj.has_next %}
+  <a href="?page={{ page_obj.next_page_number }}">Next</a>
+  <a href="?page={{ page_obj.paginator.num_pages }}">Last</a>
+  {% endif %}
+{% endif %}
+
+{% endblock content %}

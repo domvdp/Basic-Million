@@ -1,0 +1,149 @@
+.bottom-divider {
+	position: absolute;
+	z-index: -100;
+	left: 0;
+	overflow: hidden;
+	line-height: 0;
+	transform: rotate(180deg);
+
+	svg {
+		position: relative;
+		display: block;
+		width: calc(196% + 1.3px);
+		height: 500px;
+	}
+	
+	.shape-fill {
+		fill: #122D68;
+	}
+}
+  
+.footer-flex-container {
+	display: flex;
+	position: relative;
+	top: 325px;
+	justify-content: center;
+	color: $light;
+
+	.footer-social {
+		position: relative;
+		left: 27px;
+		margin: 0 80px;
+		padding: 0px;
+
+		li {
+			list-style: none;
+			margin-top: 15px;
+			padding: 5px;
+			display: inline-flex;
+  
+			/* circular backgrounds for social icons */
+			a {
+				display: inline-flex;
+				width: 1px;
+				height: 1px;
+				padding: 1.25em;
+				border-radius: 50%;
+				justify-content: center;
+				align-items: center;
+				transition: 200ms;
+				color: $light;
+				border: solid 1px $light;
+  
+				&:hover {
+					border-radius: 25%;
+					transform: scale(1.4);
+				}
+			}
+		}
+
+		ul {
+			margin-left: -5px;
+
+			.footer-fb-icon a:hover {
+				background: #1778F2;
+			
+				> i {
+					transform: scale(1.5) rotate(360deg);
+					transition: 300ms;
+				}
+			}
+
+			.footer-insta-icon a:hover {
+				background: #bc2a8d;
+			
+				> i {
+					transform: scale(2.1) rotate(360deg);
+					transition: 300ms;
+				}
+			}
+
+			.footer-twit-icon a:hover {
+				background: #38A1F3;
+			
+				> i {
+					transform: scale(1.7) rotate(360deg);
+					transition: 300ms;
+				}
+			}
+		}
+	}
+
+	.vl {
+		position: relative;
+		left: 27px;
+		background: $light;
+		width: 1.5px;
+		height: 100px;
+		display: flex;
+		justify-content: center;
+	}
+
+	.footer-contact {
+		position: relative;
+		left: 27px;
+		margin: 0 80px;
+		padding: 0px;
+
+		li {
+			list-style: none;
+			margin-top: 15px;
+			padding: 2px;
+			display: inline-flex;
+			font-size: 17px;
+
+			a {
+				color: $light ;
+			}
+		}
+	}
+}
+  
+.copyright {
+	color: $light;
+	position: relative;
+	top: 362px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 13px;
+
+	span {
+		display: inline-flex;
+	}
+}
+  
+@media screen and (max-width: 780px) {
+	.vl {
+		display   :   none   ;
+	}
+
+	.footer-social {
+		padding-bottom   :   60px   ;
+	}
+
+	/* temp fix for vl and copyright alignment */
+	.copyright p {
+		padding-right   :   unset   ;
+	}
+}

@@ -1,0 +1,67 @@
+{% extends "blog/base.html" %}
+{% block content %}
+
+<div class="title-container">
+  <div class="title" id="investing-title">
+    <span>{{ title }}</span>
+  </div>
+</div>
+
+<div class="intro">
+  <p>
+    Here I will talk about everything finance when it comes to the market.
+    All jargon will be replaced with easy to understand concepts; making a
+    profit through investing doesn't have to be difficult. You simply need a
+    set of rules, and then an unwavering discipline in following them.
+  </p>
+  <p>
+    The main focus will be around the most sucessful investor the world has
+    ever seen, Warren Buffet. His rules are extremely simple to understand,
+    but I will be expanding upon my own personal modifications, and also providing
+    valuable information for anyone ranging from a complete novice to
+    an already successful investor.
+  </p>
+  <p>
+    There will be regular news updates about the lastest undervalued stocks,
+    but there will also be consise future-proof blogs about everything you
+    need to know when it comes to investing.
+  </p>
+  <p>
+    For those of you that want to invest, but neither have an interest in
+    investing/finance nor the time to learn, I will have one simple blog
+    that will enable you to make a profit in the market for the rest of your
+    life. The limitation however, is that the more you learn, the more profit you
+    will be able to make.
+  </p>
+  <p>
+    Future proof your investing, and identify growth stocks for the next 10
+    years. Build your knowledge and selectively invest in companies with a
+    competitive edge in the following areas:
+    <ul>
+      <li>Disruptive technologies</li>
+      <li>The Cloud</li>
+      <li>Autonomous Driving</li>
+      <li>Communications and the use of Satellites</li>
+      <li>The Internet of Things, 5G and how this will change how we live and work</li>
+      <li>Software as a Service (SAAS)</li>
+      <li>Payment as a service (PAAS)</li>
+      <li>Digital Payments and a cashless society</li>
+      <li>Robotics</li>
+      <li>Artificial Intelligence (AI)</li>
+      <li>Genetic Engineering</li>
+    </ul>
+  </p>
+  <p>
+    Content Coming Soon...
+  </p>
+  <hr class="line-sep">
+</div>
+
+<div class="blog-cards-container" id="investing-postcard-colors">
+  {% for post in investing_posts %}
+    {% include 'blog/postcard.html' %}
+  {% endfor %}
+</div>
+<div class="sidebar"></div>
+
+{% endblock content %}

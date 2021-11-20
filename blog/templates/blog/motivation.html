@@ -1,0 +1,56 @@
+{% extends "blog/base.html" %}
+{% block content %}
+
+<div class="title-container">
+  <div class="title" id="motivation-title">
+    <span>{{ title }}</span>
+  </div>
+</div>
+
+<div class="intro">
+  <p>
+    Be exposed to some of the world's most remarkable people, to how they
+    overcame their problems, and to how they created success for themselves.
+  </p>
+  <p>
+    To name a few, the diverse list of people will include the likes of:
+    <ul>
+      <li>Jim Rohn</li>
+      <li>Tony Robbins</li>
+      <li>Mel Robbins</li>
+      <li>Nick Vujicic</li>
+      <li>Simon Sinek</li>
+      <li>Grant Cardone</li>
+      <li>Warren Buffet</li>
+      <li>Bill Gates</li>
+      <li>Bear Grylls</li>
+      <li>Eric Thomas</li>
+      <li>Les Brown</li>
+      <li>Thomas Edison</li>
+      <li>Albert Einstein</li>
+      <li>Maire Curie</li>
+      <li>Winston Churchhill</li>
+      <li>Janine Shepherd</li>
+    </ul>
+  </p>
+  <p>
+    No matter what your situation, no matter who you are or what you want to
+    achieve, you can be inspired or motivated by someone, and you'll most
+    likely find that someone on this website. I have a deep passion for
+    seeking out people with incredible stories, and I want to share that
+    powerful passion with you!
+  </p>
+  <p>
+  Content Coming Soon...
+  </p>
+  <hr class="line-sep">
+</div>
+
+<div class="blog-cards-container">
+  {% for post in motivation_posts %}
+    {% include 'blog/postcard.html' %}
+  {% endfor %}
+</div>
+<div class="sidebar"></div>
+
+{% endblock content %}
