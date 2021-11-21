@@ -1,1 +1,1 @@
-web: gunicorn Basic_Million_Final.wsgi
+web: gunicorn Basic_Million.wsgi
