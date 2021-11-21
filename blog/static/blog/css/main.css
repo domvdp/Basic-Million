@@ -136,18 +136,14 @@ header nav ul .nav-motivation:hover {
 }
 
 .top-divider {
-  position: relative;
   line-height: 0;
   fill: #fff;
   background-color: #122d68;
-  top: -195px;
 }
 
 .title-bg {
   margin-top: 50px;
-  height: 200px;
   background: #122d68;
-  width: 100%;
 }
 
 .title-container {
@@ -200,7 +196,7 @@ header nav ul .nav-motivation:hover {
 }
 
 .blog-cards-container {
-  -ms-grid-row: 2;
+  -ms-grid-row: 3;
   -ms-grid-column: 2;
   grid-area: blogcard;
 }
@@ -470,11 +466,118 @@ header nav ul .nav-motivation:hover {
 }
 
 .sidebar {
-  -ms-grid-row: 2;
+  -ms-grid-row: 3;
   -ms-grid-column: 3;
   grid-area: sidebar;
   border: solid 2px #122d68;
   height: 500px;
+}
+
+.intro {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: about;
+}
+
+.about-grid {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 80px;
+  -ms-grid-columns: 1fr 3fr 3fr 1fr;
+      grid-template-columns: 1fr 3fr 3fr 1fr;
+  -ms-grid-rows: 4fr 1fr 1fr 4fr 4fr;
+      grid-template-rows: 4fr 1fr 1fr 4fr 4fr;
+      grid-template-areas: '...........        aim            aim     ...........' '    hl              hl               hl              hl    ' 'blog-topics    blog-topics       blog-topics    blog-topics' '...........   topic-saving     topic-investing  ...........' '...........   topic-mindset    topic-motivation ...........';
+}
+
+.about-grid h2 {
+  padding-bottom: 10px;
+}
+
+.aim {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: aim;
+}
+
+.follow-us {
+  grid-area: follow-us;
+}
+
+.hl {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: hl;
+  border-top: 1px solid lightGrey;
+}
+
+.blog-topics {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: blog-topics;
+}
+
+.topic-saving {
+  -ms-grid-row: 4;
+  -ms-grid-column: 2;
+  grid-area: topic-saving;
+  border: 10px solid var(--blue);
+  background: rgba(0, 153, 255, 0.2);
+}
+
+.topic-investing {
+  -ms-grid-row: 4;
+  -ms-grid-column: 3;
+  grid-area: topic-investing;
+  border: 10px solid var(--green);
+  background: rgba(67, 203, 103, 0.2);
+}
+
+.topic-mindset {
+  -ms-grid-row: 5;
+  -ms-grid-column: 2;
+  grid-area: topic-mindset;
+  border: 10px solid var(--yellow);
+  background: rgba(255, 230, 60, 0.2);
+}
+
+.topic-motivation {
+  -ms-grid-row: 5;
+  -ms-grid-column: 3;
+  grid-area: topic-motivation;
+  border: 10px solid var(--red);
+  background: rgba(255, 92, 92, 0.2);
+}
+
+.topic-saving, .topic-investing, .topic-mindset, .topic-motivation {
+  border-radius: 20px;
+  padding: 15px;
+}
+
+.blog-topics, .about-grid h2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media screen and (max-width: 600px) {
+  .about-grid {
+    display: unset;
+  }
+  .topic-saving, .topic-investing, .topic-mindset, .topic-motivation {
+    margin: 20px 20px;
+  }
+}
+
+footer {
+  margin-top: auto;
 }
 
 .bottom-divider {
@@ -669,13 +772,40 @@ header nav ul .nav-motivation:hover {
   font-family: Sans-Serif, "Open Sans", serif;
 }
 
+html {
+  height: 100%;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100%;
+}
+
 .main-container {
+  margin-top: 90px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 800px 300px 1fr;
       grid-template-columns: 1fr 800px 300px 1fr;
-      grid-template-areas: ". intro  intro  ." ". blogcard  sidebar  .";
-  margin-top: -195px;
+      grid-template-areas: ". intro  intro  ." ". about  about ." ". blogcard  sidebar  .";
+}
+
+@media screen and (min-width: 18in) {
+  .main-container {
+    margin-top: 50px;
+  }
+}
+
+@media screen and (min-width: 24in) {
+  .main-container {
+    margin-top: -20px;
+  }
 }
 
 p {

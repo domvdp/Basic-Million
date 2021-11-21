@@ -6,6 +6,7 @@
 @import 'postcard';
 @import 'sidebar';
 @import 'home';
+@import 'about';
 @import 'footer';
 
 * {
@@ -16,14 +17,40 @@
   font-family: Sans-Serif, "Open Sans", serif;
 }
 
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
 .main-container {
+  margin-top: 90px;
   display: grid;
   grid-template-columns: 1fr 800px 300px 1fr;
   grid-template-areas:
     ". intro  intro  ."
+    ". about  about ."
     ". blogcard  sidebar  .";
-  margin-top: -195px;
 }
+
+// This is a temp hack, but a more elegant solution to come-------------
+
+@media screen and (min-width:18in) {
+  .main-container {
+    margin-top: 50px;
+  }
+}
+
+@media screen and (min-width:24in) {
+  .main-container {
+    margin-top: -20px;
+  }
+}
+// ---------------------------------------------------------------------
 
 p {
   margin: 20px 0 20px 0;
