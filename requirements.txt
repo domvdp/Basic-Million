@@ -37,7 +37,6 @@ python-dateutil==1.5
 python-docx==0.8.10
 python-pdf==0.38
 pytz==2020.1
-pywin32==300
 reportlab==3.5.59
 requests==2.25.1
 six==1.15.0
