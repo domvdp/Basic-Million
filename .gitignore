@@ -1,6 +1,3 @@
-# Allow Heroku auto assets pre-compilation
-public/assets/**
-
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
