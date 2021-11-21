@@ -46,6 +46,7 @@ termcolor==1.1.0
 traitlets==5.1.1
 update==0.0.1
 urllib3==1.26.3
+waitress==2.0.0
 webencodings==0.5.1
 whitenoise==5.2.0
 yarg==0.1.9
